@@ -1,0 +1,10 @@
+syntax: glob
+.DS_Store
+*.lck
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.synctex.gz
+
+*.log
