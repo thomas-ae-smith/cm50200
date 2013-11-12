@@ -1,9 +1,9 @@
-\documentclass[oribibl]{llncs}
+\documentclass[oribibl,11pt]{llncs}
 \setcounter{secnumdepth}{3}
 
 \begin{document}
 
-\title{CM50200 Mobile and Pervasive Systems: 3. Interaction in and with the environment}
+\title{CM50200 Mobile and Pervasive Systems:\\3. Interaction in and with the environment}
 
 
 \author{Thomas Smith}
@@ -11,89 +11,121 @@
 \maketitle
 
 \begin{abstract}
-Lorum ipsum.
+HCI research in mobile and pervasive computing is often considered in terms of interaction with `smart' mobile devices - phones, PDAs, tablets, and increasingly lightweight laptop computers. However there are many examples of interaction with the environment, in the environment, and where the computing is embedded in the environment. This paper attempts to summarise a number of relevant examples of human-environment interaction, and presents an evaluation of successful approaches and a discussion of the design challenges in this area.
 \end{abstract}
 
 \section{Introduction}
 % When we think of mobile and pervasive computing we often think of mobile phones, PDAs, tablet computers and the like. However there are many examples of interaction with the environment, in the environment, and where the computing is embedded in the environment. Give relevant examples of these, evaluate their success and consider what the design challenges are.
 
-Device-free interaction in smart domestic environments \cite{Heidrich:2013:DIS:2459236.2459248}
+As a result of the augmented computational ability of previously `dumb' devices found throughout everyday life, the field of human-environment interaction (HEI) is becoming an increasingly important aspect of HCI research. As the ambient intelligence and connectedness of typical environments grows, the notion of isolated and dedicated `smart' devices becomes less relevant, and personal computation devices find a new role as intermediaries between their owner and the surrounding smart environments - where they are needed at all. Increasingly, the functionality provided by computation devices is becoming ubiquitously available, and new avenues of interaction with the environment are afforded by the sensor-rich nature of modern life. As computers disappear as the sole means of interaction with the virtual world, a new set of challenges are presented by the integration of pervasive computation in smart environments \cite{Streitz:2006:HIH:1783789.1783791}.
+
 
 %quoted abstract
-In this keynote, I argue for a transition from designing Human-Computer Interaction to Human-Environment Interaction. This is done in the context of ambient intelligence and the disappearing computer, and the resulting challenges for designing interaction in future smart environments. Our approach is based on exploiting the affordances of real objects by augmenting their physical properties with the potential of computer-based support. Combining the best of both worlds requires an integration of real and virtual worlds resulting in hybrid worlds. In this approach, the computer "disappears" and is almost "invisible", but its functionality is ubiquitously available and provides new forms of interaction. The general comments are illustrated with examples from different projects. \cite{Streitz:2006:HIH:1783789.1783791}
+% In this keynote, I argue for a transition from designing Human-Computer Interaction to Human-Environment Interaction. This is done in the context of ambient intelligence and the disappearing computer, and the resulting challenges for designing interaction in future smart environments. Our approach is based on exploiting the affordances of real objects by augmenting their physical properties with the potential of computer-based support. Combining the best of both worlds requires an integration of real and virtual worlds resulting in hybrid worlds. In this approach, the computer "disappears" and is almost "invisible", but its functionality is ubiquitously available and provides new forms of interaction. The general comments are illustrated with examples from different projects. 
 %end quoted abstract
 
 \subsection{Overview}
 % Background defining the terms and the motivation of the paper. A number of relevant examples of these, evaluate their success and consider what the design challenges are.
+This paper presents examples of a range of approaches to human-environment interaction. After a brief look at the field as a whole in Section \ref{sec:background} and a definition of terms, Section \ref{sec:passive_interaction} considers systems that are designed for undirected passive interaction. Section \ref{sec:active_interaction} looks at the wider area of environments designed for directed, active interaction, with special consideration of the notion of connected `smart' environments. A number of the design challenges relevant to the field of HEI are noted, and conclusions drawn about the current state of research and wider acceptance of the field.
 
-\section{Background}
+\section{Background}		\label{sec:background}
 % Mobile and pervasive systems encompass more than just mobile devices. Define interaction with the environment, in the environment, and where the computing is embedded in the environment.
 
-Active interaction, cf. Older user experience
+In many cases, modern HCI research is concerned with the interaction between two principal participants: the user, and the computing device that affords the interaction in question. HEI considers an additional relevant `participant' -- the environment in which the interaction occurs, which necessarily in all cases affords some additional action. Often the relevant computing device is embedded in the environment itself, and in these cases it could be considered that the user is interacting directly with the environment that the computing device is a part of. In this paper, three principal scenarios are considered: interaction with the environment, interaction in the environment, and interaction where the computing is embedded in the environment.
 
-\section{Existing Systems}	\label{sec:existing_systems}
+Interaction with the environment is usually concerned with those cases where the user makes use of some non-computing augmentation of their local area. Everyday examples of this form might be the use of QR codes embedded in the environment to provide direction towards relevant data \cite{o2010older}, or other forms of tagging used to drive AR approaches \cite{Mandiliotis:2013:SIH:2526481.2526496}.
 
-Passive interaction, bluetooth device names to control and customise applications running in augmented everyday public spaces \cite{Davies:2009:UBD:1555816.1555832}.
+The topic of interaction in the environment describes cases where the local area augmentation affords additional interactions not available in unaugmented environments, but the environment itself is not the focus of the interaction. These additional interactions are often social or artistic in nature, and can occur passively without deliberate user input \cite{Nguyen:2006:MSV:1180639.1180732} -- though some systems provide scope for further deliberate interaction \cite{palmer2010bluetooth}.
 
-Passive interaction, art in public spaces. Location/presence rather than deliberate intentional interaction \cite{Nguyen:2006:MSV:1180639.1180732}
+Interaction where the computing is embedded in the environment is a major focus of HEI, as in most cases the interaction can occur directly between the user and the environment without the use of a personal computing device as intermediary. The growing body of research into `smart environments' is largely concerned with this type of device-free human-environment interaction \cite{Heidrich:2013:DIS:2459236.2459248}.
 
-Passive interaction with the environment TODO flesh out \cite{Vazquez:2004:IMP:1031419.1031437}
+From the point of view of the user however, these distinctions are largely irrelevant. Their primary concern is the effect of these affordances on their actions, and so the field of HEI systems can be broadly split into to classes: active, directed systems that the user consciously interacts with, and `passive' systems, where often the user is not immediately aware of the choice to use it.
+
+
+\section{Active Interaction}		\label{sec:active_interaction}
+
+The proliferation of `smart' mobile devices has provided ample scope for user interaction with augmented local environments. In many cases, this takes the form of concious, directed interaction with some aspect of the local area, using the computational capacity of the mobile device to `unlock' the action afforded by the environment. Increasingly however, the mobile device is not needed as an intermediary, and instead the computational capability is provided embedded in the environment itself, leading to apparently `smart' environments.
+
+HEI where the computation resides entirely within the user's device is already possible and present within everyday situations -- applications are available which can identify audio or visual cues present within the environment and provide additional information or functionality \cite{o2010older}. Research has also been done into the use of mobile devices to control computing functionality already present in the environment \cite{Lorenz:2009:UHD:1613858.1613882}. Many of the research issues in these cases are HCI-related however, as they concern primary interaction with a single device, rather than the environment itself.
+
+Directed interaction without a device is an active research topic within HEI, as it presents a number of new design challenges related to the lack of availability of traditional input and output methods, among others. One approach is to augment everyday items with additional sensory and computational capacity, in order to create a connected system affording additional actions not available in unaugmented environments \cite{Schmidt:2002:UIU:1765426.1765451}. These environments are described as `smart', and make use of a range of novel interaction techniques.
+
 
 \subsection{Smart Environments}		\label{sub:smart_environments}
-Augmentation
 
+Smart environments are a product of the increasing pervasiveness of computing capability within objects found in everyday environments. One commonly accepted description is provided by M. Weiser et. al: ``a physical world that is richly and invisibly interwoven with sensors, actuators, displays, and computational elements, embedded seamlessly in the everyday objects of our lives, and connected through a continuous network.'' \cite{weiser1999origins}.
+
+A number of motivations exist for the creation of smart environments -- commonly, the purpose is to simplify human interaction with the previously disparate components of a system. Approaches have been developed to allow mobile devices to guide the creation of an ad-hoc smart environment \cite{Bartolini:2012:RNI:2387476.2387479}, however in most cases systems are designed to afford interaction device-free, through the provision of `Natural' user interface (NUI) components and embedded computational capability \cite{Heidrich:2013:DIS:2459236.2459248}.
+
+\subsubsection{Domestic Environments}		\label{ssub:domestic_environments}
+One popular research area is the concept of `Smart Homes' -- the creation of smart domestic environments containing increasingly connected domestic appliances \cite{masinter1998rfc2324}. The MavHome system is an agent-based intelligent domestic environment which uses predictive algorithms to maximize inhabitant comfort and minimize operation cost \cite{das2002role}. A number of smart home proof-of-concept environments built using design principles that focus on the human interaction experience have shown positive results \cite{Surie:2012:SHE:2469451.2469943}
+
+% subsubsection domestic_environments (end)
 \subsubsection{Mixed Reality Environments}		\label{ssub:mixed_reality_environments}
+Another well-defined topic of research is the creation of mixed-reality environments, that allow overlap and interaction between the real and virtual worlds \cite{Carrino:2011:HSE:2070481.2070501}. Sometimes described as `augmented reality', these systems require novel input methods and often involve tactile interaction with augmented components of the environment \cite{kaltenbrunner2007reactivision}.
 
 % subsubsection mixed_reality_environments (end)
 \subsubsection{Assistive Service Environments}		\label{ssub:assistive_service_environments}
-
-Symbiosis: an innovative human-computer interaction environment for alzheimer's support \cite{Mandiliotis:2013:SIH:2526481.2526496} investigates differing roles within augmented environment; multimodal input spanning tradition interaction methods for caregivers (scheduling, forum etc) and a range of NUI approaches to (blah) for the patient. Kinect for guesture-based interaction, augmented reality with tagging for live reminders, and EEG for (look it up TODO).
+Smart environments have also been developed to support users suffering from specific disabilities or medical conditions. One example is Symbiosis: a human-computer interaction environment designed for the support of users with Alzheimer's, as well as their primary caregivers and medical professionals \cite{Mandiliotis:2013:SIH:2526481.2526496}. It provides functionality relating to differing roles within the augmented environment; from tradition interaction methods for caregivers (scheduling, forums etc) to a range of NUI interaction approaches for the patient. Kinect is used for gesture-based interaction and motion skills exercise and retention, augmented reality with tagging provides a `friendly' environment and live reminders, and EEG is used for emotional tagging of captured memory cues.
 
 % subsubsection assistive_service_environments (end)
 % subsection smart_environments (end)
 
-% section existing_systems (end)
-\section{Proposed Systems}		\label{sec:proposed_systems}
 
-% section proposed_systems (end)
+% section active_interaction (end)
+\section{Passive Interaction}	\label{sec:passive_interaction}
+
+In contrast to the active interaction systems described above, a number of passive environment interaction systems have also been researched and developed. In many cases these are designed to facilitate interaction in the environment -- that is, they provide information or functionality that affords additional artistic, personal or social interactions where the environment is not the main focus. Alternatively, the passive input may be used to control features of the local environment such as temperature or illumination -- often this as part of the functionality provided by a smart environment (section \ref{sub:smart_environments}).
+
+
+One noted passive interaction method is the detection and display of publically-available Bluetooth device names. Many mobile devices broadcast user selected device identification names, and when presented in a public environment these can raise talking points and enable social interaction. As the device names may be changed on-the-fly, active participation in the system is also possible \cite{palmer2010bluetooth}. Alternatively, the detection of a particular Bluetooth device (identified by name) indicates the presence of its owner. This information can be used to control and customise applications running in augmented everyday public spaces \cite{Davies:2009:UBD:1555816.1555832}.
+
+Device-free passive interaction with the environment is also an active research topic, through the application of computer vision techniques to detect user location or presence. Augmented public spaces can use this information to provide reactive artistic displays that respond to existing user movement rather than deliberate intentional interaction \cite{Nguyen:2006:MSV:1180639.1180732}.
+
+% Passive interaction with the environment TODO flesh out \cite{Vazquez:2004:IMP:1031419.1031437}
+
+% section passive_interaction (end)
 \section{Design Challenges}		\label{sec:design_challenges}
-\cite{Wiberg:2008:EIC:1543137.1543141}
+The provision of context-aware environmental interaction affordances presents a number of important new design considerations, due to a number of differences from typical desktop computing environments \cite{Shafer:2001:IIC:1463108.1463124}. There is typically no single focus for the user, as their interactions are centered on and within the environment itself. There is also typically a lack of the traditional interaction methods to which users are accustomed, especially in cases where the interaction is preformed without the use of a personal device as intermediary. Finally, there is the common case where the system must provide for simultaneous interaction from multiple users within the environment. Each of these issues represents a number of opportunities for alternative solutions, a number of which are described here.
 
-A Smart Home Experience Using Egocentric Interaction Design Principles \cite{Surie:2012:SHE:2469451.2469943}
+% fundamental challenges, consequences, and implications for design facing interaction designers\cite{Wiberg:2008:EIC:1543137.1543141}
+
+
 
 %quoted abstract
-Context-aware intelligent environments are computing systems embedded within physical spaces. They are equipped with input and output computing devices for users and sensors to provide contextual information to the system. These environments provide new challenges to interface designers due to a number of differences from typical desktop computing environments, including the lack of a single focal point for the user, a dynamic set of interaction devices, the sensor-rich nature of the environment, the potential of multiple simultaneous users, and the opportunity for diverse interaction modalities. This essay describes these challenges and focuses on issues involving multiple interaction modalities and automatic system behaviors. \cite{Shafer:2001:IIC:1463108.1463124}
+% These environments provide new challenges to interface designers due to a number of differences from typical desktop computing environments, including the lack of a single focal point for the user, a dynamic set of interaction devices, the sensor-rich nature of the environment, the potential of multiple simultaneous users, and the opportunity for diverse interaction modalities. This essay describes these challenges and focuses on issues involving multiple interaction modalities and automatic system behaviors. 
+
 %end quoted abstract
 
-Crowd interaction
-%quoted abstract
-Smart environments (e.g., airports, hospitals, stadiums, and other physical spaces using ubiquitous computing to empower many mobile people) provide novel challenges for usability engineers. Firstly, interaction can be implicit and therefore unintentional on the part of its users. Secondly, the impact of a smart environment can influence the collective or crowd behavior of those immersed within it. These challenges lead to requirements for complementary analyses which must be combined with the more typical focus on the interaction between user and device. The paper explores a family of stochastic models aimed at analyzing these features with a particular focus on crowd interaction.
-\cite{Harrison:2009:ECI:1570433.1570456}
-%end quoted abstract
+\subsection{User Focus}		\label{sub:user_focus}
+In some systems, augmented tactile interfaces provide a natural focal point for the user's interactions \cite{Schmidt:2002:UIU:1765426.1765451}. In contrast, device-free interactions do not provide many of the feedback cues to which users are accustomed \cite{Heidrich:2013:DIS:2459236.2459248}. One approach is to make every element of the interaction design `egocentric' -- that is, rather than designing in terms of the system's behaviour, special consideration is taken of the user's expected perception of the system's behaviour \cite{Surie:2012:SHE:2469451.2469943}.
 
+% subsection user_focus (end)
 \subsection{Interaction Methods}		\label{sub:interaction_methods}
-Gestural
-\cite{Carrino:2011:ATH:2027296.2027317}
-
-Small lexicon of functional gestures \cite{Carrino:2013:FGH:2530824.2530844}
-Spoken language for interaction with intellignet environments \cite{Minker:2009:RSL:1735821.1735825}
-Tangible User Interface
-\cite{Bartolini:2012:RNI:2387476.2387479}
-Multimodal
-\cite{Carrino:2011:HSE:2070481.2070501}
-Multimodal interaction with a home operating system \cite{Weingarten:2010:TMI:1858171.1858255}
+Absent the traditional keyboard-and-mouse interaction methods, or even the more recent touch interfaces of mobile devices, a number of of other `natural' user interface (NUI) approaches are possible. Tangible interfaces can provide information at-a-glance while still allowing for meaningful `natural' user input \cite{Bartolini:2012:RNI:2387476.2387479}. Spoken language commands are immediately familiar to native speakers, and have been shown to be an easily memorable technique for interaction with intelligent environments \cite{Minker:2009:RSL:1735821.1735825}, while gestural input is an increasingly popular research area due to the increased reliability of modern approaches \cite{Carrino:2011:ATH:2027296.2027317,Carrino:2013:FGH:2530824.2530844}. Finally, a number of multi-modal approaches have been developed which attempt to combine the best features of the other techniques \cite{Carrino:2011:HSE:2070481.2070501,Weingarten:2010:TMI:1858171.1858255}.
 
 
 % subsection interaction_methods (end)
 
-Augmenting everyday tables as interaction (pointing) devices \cite{Schmidt:2002:UIU:1765426.1765451}
+\subsection{Multi-user Systems}		\label{sub:multi_user_systems}
+A primary design consideration for many environment-interaction systems is the effect of interaction from multiple simultaneous users, with respect to action precedence, conflict and feedback effects. 
+Crowd interaction with a smart environment can influence the collective behaviour of those immersed within it, especially in busy public spaces such as airports or stations \cite{Harrison:2009:ECI:1570433.1570456}. Consideration should also be given to the effect of users who are interacting with the system upon co-located individuals who are not, and may not even be aware of its presence \cite{Nguyen:2006:MSV:1180639.1180732}.
 
-how its application can enhance a post-WIMP human-environment interaction
+%quoted abstract
+% Smart environments (e.g., airports, hospitals, stadiums, and other physical spaces using ubiquitous computing to empower many mobile people) provide novel challenges for usability engineers. Firstly, interaction can be implicit and therefore unintentional on the part of its users. Secondly, . These challenges lead to requirements for complementary analyses which must be combined with the more typical focus on the interaction between user and device. The paper explores a family of stochastic models aimed at analyzing these features with a particular focus on crowd interaction.
+
+%end quoted abstract
+
+% subsection multi_user_systems (end)
+
+
+
+% how its application can enhance a post-WIMP human-environment interaction
 
 % section design_challenges (end)
 \section{Conclusion}
+The rise of computational capability embedded within everyday environments has led to a number of new considerations within the field of human-computer interaction: specifically the area of human-environment interaction. A diverse range of new interactions are possible due to the sensor-rich and connected nature of many environments, and this implies new fundamental challenges, consequences, and implications for design facing interaction designers.
 
-\newpage
 \bibliographystyle{splncs03}
 \bibliography{IitEreport}
 
