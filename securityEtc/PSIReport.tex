@@ -1,0 +1,95 @@
+\documentclass[oribibl,11pt]{llncs}
+\setcounter{secnumdepth}{3}
+
+\begin{document}
+
+\title{CM50200 Mobile and Pervasive Systems:\\6. Privacy, Security and Integrity design issues}
+
+
+\author{Thomas Smith}
+\institute{Centre for Digital Entertainment\\University of Bath\\\email{taes22@bath.ac.uk}}
+\maketitle
+
+\begin{abstract}
+In developing mobile and pervasive computing, the issues of privacy, security and integrity of the user and the system are often difficult to design for. What are the issues for each of these factors? How can the designer be aware of and reason about these issues in the design and development processes? How can the user be aware of these issues and when they are breached?
+\end{abstract}
+
+\section{Introduction}
+% In developing mobile and pervasive computing, the issues of privacy, security and integrity of the user and the system are often difficult to design for. What are the issues for each of these factors? How can the designer be aware of and reason about these issues in the design and development processes? How can the user be aware of these issues and when they are breached?
+
+
+\subsection{Overview}
+% Background defining the terms and the motivation of the paper. A number of relevant examples of these, evaluate their success and consider what the design challenges are.
+This paper looks at the issues surrounding privacy, security and integrity in the context of mobile and pervasive computing. After a brief look at the field as a whole in Section \ref{sec:background} and a definition of terms, Section \ref{sec:issues} attempts to draw a distinction between x and y. Sections \ref{sub:privacy}, \ref{sub:security} and \ref{sub:integrity} look at the issues relating to privacy, security and integrity respectively, and Sections \ref{sub:designers} and \ref{sub:end_users} look at how designers and end-users can be aware of these issues. A number of existing approaches relevant to the discussed issues are noted, and conclusions drawn about the current state of research and wider awareness among end-users and designers.
+
+\section{Background}		\label{sec:background}
+%  Define terms
+
+As with other areas of computing, mobile and pervasive resaerch has to cope with issues surrounding the privacy, security and integrity of developed systems. ... In this paper, these issues are considered with reference to existing research in these areas, and 
+
+Privacy is
+
+Security is
+
+Integrity is
+
+Each of these areas covers a number of related
+
+% section background (end)
+\section{Issues}			\label{sec:issues}
+
+\subsection{Privacy}		\label{sub:privacy}
+
+Special considerations for mobile systems and privacy - location-based information
+
+
+\cite{Patil:2012:RRR:2335356.2335363}
+%quoted abstract
+% Rapid growth in the usage of location-aware mobile phones has enabled mainstream adoption of location-sharing services (LSS). Integration with social-networking services (SNS) has further accelerated this trend. To uncover how these developments have shaped the evolution of LSS usage, we conducted an online study (N = 362) aimed at understanding the preferences and practices of LSS users in the US. We found that the main motivations for location sharing were to connect and coordinate with one's social and professional circles, to project an interesting image of oneself, and to receive rewards offered for 'checking in.' Respondents overwhelmingly preferred sharing location only upon explicit action. More than a quarter of the respondents recalled at least one instance of regret over revealing their location. Our findings suggest that privacy considerations in LSS are affected due to integration within SNS platforms and by transformation of location sharing into an interactive practice that is no longer limited only to finding people based on their whereabouts. We offer design suggestions, such as delayed disclosure and conflict detection, to enhance privacy-management capabilities of LSS.
+
+% subsection privacy (end)
+\subsection{Security}	\label{sub:security}
+
+Special considerations for mobile/pervasive devices: shoulder surfing, contactless biometric identification
+
+\cite{Schaub:2013:EDS:2501604.2501615}
+%quoted abstract
+% Smartphones have emerged as a likely application area for graphical passwords, because they are easier to input on touchscreens than text passwords. Extensive research on graphical passwords and the capabilities of modern smartphones result in a complex design space for graphical password schemes on smartphones. We analyze and describe this design space in detail. In the process, we identify and highlight interrelations between usability and security characteristics, available design features, and smartphone capabilities. We further show the expressiveness and utility of the design space in the development of graphical passwords schemes by implementing five different existing graphical password schemes on one smartphone platform. We performed usability and shoulder surfing experiments with the implemented schemes to validate identified relations in the design space. From our results, we derive a number of helpful insights and guidelines for the design of graphical passwords.
+
+
+% subsection security (end)
+\subsection{Integrity}	\label{sub:integrity}
+
+% subsection integrity (end)
+% section issues (end)
+\section{Awareness}			\label{sec:awareness}
+
+\subsection{Designers}	\label{sub:designers}
+
+
+\cite{Chin:2012:MUC:2335356.2335358}
+%quoted abstract
+% In order to direct and build an effective, secure mobile ecosystem, we must first understand user attitudes toward security and privacy for smartphones and how they may differ from attitudes toward more traditional computing systems. What are users' comfort levels in performing different tasks? How do users select applications? What are their overall perceptions of the platform? This understanding will help inform the design of more secure smartphones that will enable users to safely and confidently benefit from the potential and convenience offered by mobile platforms. To gain insight into user perceptions of smartphone security and installation habits, we conduct a user study involving 60 smartphone users. First, we interview users about their willingness to perform certain tasks on their smartphones to test the hypothesis that people currently avoid using their phones due to privacy and security concerns. Second, we analyze why and how they select applications, which provides information about how users decide to trust applications. Based on our findings, we present recommendations and opportunities for services that will help users safely and confidently use mobile applications and platforms.
+
+% subsection designers (end)
+\subsection{End-users}	\label{sub:end_users}
+
+
+\cite{Balebako:2013:LBW:2501604.2501616}
+%quoted abstract
+% Today's smartphone applications expect users to make decisions about what information they are willing to share, but fail to provide sufficient feedback about which privacy-sensitive information is leaving the phone, as well as how frequently and with which entities it is being shared. Such feedback can improve users' understanding of potential privacy leakages through apps that collect information about them in an unexpected way. Through a qualitative lab study with 19 participants, we first discuss misconceptions that smartphone users currently have with respect to two popular game applications that frequently collect the phone's current location and share it with multiple third parties. To measure the gap between users' understanding and actual privacy leakages, we use two types of interfaces that we developed: just-in-time notifications that appear the moment data is shared and a visualization that summarizes the shared data. We then report on participants' perceived benefits and concerns regarding data sharing with smartphone applications after experiencing notifications and having viewed the visualization. We conclude with a discussion on how heightened awareness of users and usable controls can mitigate some of these concerns.
+
+\cite{Bravo-Lillo:2013:YAP:2501604.2501610}
+%quoted abstract
+% We designed and tested attractors for computer security dialogs: user-interface modifications used to draw users' attention to the most important information for making decisions. Some of these modifications were purely visual, while others temporarily inhibited potentially-dangerous behaviors to redirect users' attention to salient information. We conducted three between-subjects experiments to test the effectiveness of the attractors. In the first two experiments, we sent participants to perform a task on what appeared to be a third-party site that required installation of a browser plugin. We presented them with what appeared to be an installation dialog from their operating system. Participants who saw dialogs that employed inhibitive attractors were significantly less likely than those in the control group to ignore clues that installing this software might be harmful. In the third experiment, we attempted to habituate participants to dialogs that they knew were part of the experiment. We used attractors to highlight a field that was of no value during habituation trials and contained critical information after the habituation period. Participants exposed to inhibitive attractors were two to three times more likely to make an informed decision than those in the control condition.
+
+% subsection end_users (end)
+% section awareness (end)
+\section{Conclusion}		\label{ssub:conclusion}
+
+
+% section conclusion (end)
+\bibliographystyle{splncs03}
+\bibliography{PSIReport}
+
+\end{document}
